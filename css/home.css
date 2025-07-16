@@ -1,59 +1,90 @@
 @font-face {
-    font-family: Pixel;
+    font-family: 'Fusion Pixel 12px M zh_hans';
     src: url('/fonts/Pixel/fusion-pixel-12px-monospaced-zh_hans.ttf') format('truetype');
-    font-size: 12px;
+}
+/* <html> */
+/* .crt {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    flex: 1;
+    background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    pointer-events: none;
+    z-index: 2;
+    background-size: 100% 2px, 100% 3px;
+} 
+*/
+/* <head> */
+h1 {
+    color: #144fff;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3em;
+    font-family: 'Fusion Pixel 12px M zh_hans';
+    text-shadow: 
+    0 0 5px #4e3edd,
+    0 0 8px #6455eb,
+    0 0 10px #a69df4,
+    0 0 12px #ffffff;
 }
 
+/* <body> */
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Pixel;
+    perspective: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
 }
 
-.p2 {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 20px 0;
-}
-
+/* <ul> */
 .ul1 {
     list-style-type: none;
     padding: 0;
     text-align: center;
     font-size: 1.2em;
+    color: #000;
 }
 
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 1.5em;
-}
-
-footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.5em;
-    padding: 10px;
-}
-
+/* <nav> */
 .nav1 {
-    padding: 10px;
-    font-size: 1em;
     display: flex;
     justify-content: space-around;
 }
 
-a {
+.nav1 a {
     padding: 10px;
     text-decoration: none;
     color: #000;
-    border: 2.5px solid gray;
 }
-        
+
+/* <p> */
 p {
     text-align: center;
+}
+
+.p1 {
     font-size: 1.2em;
 }  
+
+.p2 {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #000;
+}
+
+/* <footer> */
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.1em;
+    padding: 0.1px;
+}
