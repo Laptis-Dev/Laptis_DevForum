@@ -1,0 +1,58 @@
+@font-face {
+    font-family: pixel;
+    src: url('./fonts/Pixel/fusion-pixel-12px-monospaced-zh_hans.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+ul1 {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-family: pixel;
+    font-size: 1.5em;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.5em;
+    padding: 10px;
+}
+
+nav1 {
+    padding: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border: 2.5px solid gray;
+}
+        
+p {
+    text-align: center;
+    font-size: 1.2em;
+}  
