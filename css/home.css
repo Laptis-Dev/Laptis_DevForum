@@ -1,7 +1,11 @@
 /* Custom_Font */
 @font-face {
     font-family: 'Fusion Pixel 12px M zh_hans';
-    src: url('/fonts/Pixel/fusion-pixel-12px-monospaced-zh_hans.ttf') format('truetype');
+    src: url('/fonts/Pixel12px/pixelzh.ttf') format('truetype');
+    font-family: 'Fusion Pixel 10px M zh_hans';
+    src: url('/fonts/Pixel10px/pixelzh.ttf') format('truetype');
+    font-family: 'Fusion Pixel 8px P zh_hans';
+    src: url('/fonts/Pixel8px/pixelzh.ttf') format('truetype');
 }
 
 /* MainTitle */
@@ -22,23 +26,30 @@ h1 {
 /* TextBox_Effect */
 .cards {
     padding: 20px;
-    width: 35%;
-    filter: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    border: 5px solid #ffffff;
+    margin: 20px auto;
+    width: 80%;
+
+    border: 0 solid;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: #00000000;
+
+    filter: blur(4px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    background-clip: padding-box;
-    background-color: rgb(245, 245, 245);;
+ 
+    transition: 
+    filter 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;    
+}
+
+.cards:hover {
+    background-color: #ffffff;
+    filter: blur(0);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
 /* global setting for body*/
 body {
-    margin: 0;
     padding: 0;
     min-height: 100vh;
     perspective: 1px;
@@ -57,23 +68,33 @@ body {
     text-align: center;
     font-size: 1.2em;
     color: #000;
+    font-family: 'Fusion Pixel 10px M zh_hans';
 }
 
 /* <nav> */
 .nav1 {
     display: flex;
     justify-content: space-around;
-    border: 2px solid #000;
-    background-color: #6455eb;
 }
 
 .nav1 a {
-    padding: 10px;
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5px;
     text-decoration: none;
     color: #000;
-    flex: 1;
     text-align: center;
-    border-inline: 1px solid #000;
+    border: 3px solid;
+    border-color: #00000000;
+    border-radius: 20px;
+    font-family: 'Fusion Pixel 10px M zh_hans';
+    box-shadow: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.nav1 a:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-color: #000;
 }
 
 /* <p> */
@@ -89,6 +110,7 @@ p {
     font-size: 1.2em;
     margin: 20px 0;
     color: #000;
+    font-family: 'Fusion Pixel 10px M zh_hans';
 }
 
 /* <footer> */
@@ -96,5 +118,5 @@ footer {
     margin-top: auto;
     text-align: center;
     font-size: 0.1em;
-    padding: 0;
+    font-family: 'Fusion Pixel 8px P zh_hans';
 }
