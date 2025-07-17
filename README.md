@@ -1,4 +1,4 @@
-# Laptis Dev Forum ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)
+# Laptis Dev Forum ![License](https://github.com/Laptis-Dev/Laptis_DevForum?tab=MIT-1-ov-file)
 一个轻量级的论坛**前端**，目前此项目积极开发中...
 
 # 协议
