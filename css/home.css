@@ -1,24 +1,10 @@
+/* Custom_Font */
 @font-face {
     font-family: 'Fusion Pixel 12px M zh_hans';
     src: url('/fonts/Pixel/fusion-pixel-12px-monospaced-zh_hans.ttf') format('truetype');
 }
-/* <html> */
-/* .crt {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: block;
-    flex: 1;
-    background:
-    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    pointer-events: none;
-    z-index: 2;
-    background-size: 100% 2px, 100% 3px;
-} 
-*/
-/* <head> */
+
+/* MainTitle */
 h1 {
     color: #144fff;
     display: flex;
@@ -33,6 +19,7 @@ h1 {
     0 0 15px #ffffff;
 }
 
+/* TextBox_Effect */
 .cards {
     padding: 20px;
     width: 35%;
@@ -49,7 +36,7 @@ h1 {
     background-color: rgb(245, 245, 245);;
 }
 
-/* <body> with global setting */
+/* global setting for body*/
 body {
     margin: 0;
     padding: 0;
@@ -62,6 +49,7 @@ body {
     background-position: center;
     mix-blend-mode: multiply;
 }
+
 /* <ul> */
 .ul1 {
     list-style-type: none;
