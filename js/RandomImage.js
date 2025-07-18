@@ -5,6 +5,12 @@ BackGround[2] = "img/3.jpg";
 BackGround[3] = "img/4.jpg";
 
 const BackGroundIndex = Math.floor(Math.random() * BackGround.length);
-document.body.style.backgroundImage = "url(" + BackGround[BackGroundIndex] + ")";
+const SelectedImagePath = BackGround[BackGroundIndex];
 
-document.body.style.setProperty('--bg-image', bgUrl);
+const fileName = SelectedImagePath.split("/").pop();
+const className = "bg" + fileName.split(".")[0];
+
+const bgElement = document.querySelector(".background");
+if (bgElement) {
+    bgElement.classList.add(className);
+}

@@ -1,5 +1,6 @@
 /* Custom_Font */
 @font-face {
+    font-family: 'Arial';
     font-family: 'Fusion Pixel 12px M zh_hans';
     src: url('/fonts/Pixel12px/pixelzh.ttf') format('truetype');
     font-family: 'Fusion Pixel 10px M zh_hans';
@@ -33,33 +34,46 @@ h1 {
     border-radius: 30px;
     background-color: #00000000;
 
-    filter: blur(4px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
  
     transition: 
-    filter 0.3s ease-in-out,
     background-color 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;    
 }
-
 .cards:hover {
     background-color: #ffffff;
-    filter: blur(0);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
-/* global setting for body*/
-body {
-    padding: 0;
-    min-height: 100vh;
-    perspective: 1px;
-    position: relative;
-    background-repeat: no-repeat;
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
-    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+    transform: translate(-10%, -10%);
+    z-index: -1;
+    pointer-events: none;
 }
+.background.bg1 {
+  background-image: url("../img/1.jpg");
+}
+
+.background.bg2 {
+  background-image: url("../img/2.jpg");
+}
+
+.background.bg3 {
+  background-image: url("../img/3.jpg");
+}
+
+.background.bg4 {
+  background-image: url("../img/4.jpg");
+}
+
 
 /* <ul> */
 .ul1 {
