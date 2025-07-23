@@ -1,21 +1,54 @@
-document.addEventListener('mousemove', BackGroundMove);
-function BackGroundMove(every) {
-    document.querySelectorAll('.background').forEach((js1) => {
-        const speed = parseFloat(js1.getAttribute('data-speed'));
-        const bg_size = document.querySelector('.background');
-        const x_max = (bg_size.clientWidth);
-        const y_max = (bg_size.scrollHeight);
-        // const vertices = {
-        //     topLeft: { x: 0, y: 0 },
-        //     topright: { x: x_max, y: y_max },
-        //     bottomLeft: { x: 0, y: -y_max },
-        //     bottomRight: { x: x_max, y: -y_max }
-        // }
-        // const x = Math.max(Math.min(window.innerWidth - every.pageX * speed) / 100);
-        // const y = Math.max(Math.min(window.innerHeight - every.pageY * speed) / 100);
-        const x = Math.max(Math.min(x_max - every.pageX * speed) / 100);
-        const y = Math.max(Math.min(y_max - every.pageY * speed) / 100);
-        js1.style.transform = `translateX(${x}px) translateY(${y}px)`;
-        js1.style.width = `width(${x_max}) height(${y_max})`;
-    })
+let parallaxEnabled = true;
+let minScaleFactors = {};
+
+function calculateMinScale(layer) {
+    const speed = parseFloat(layer.getAttribute('data-speed'));
+    const maxXOffset = window.innerWidth * speed / 2;
+    const maxYOffset = window.innerHeight * speed / 2;
+
+    const xOffsetRatio = maxXOffset / window.innerWidth;
+    const yOffsetRatio = maxYOffset / window.innerHeight;
+
+    const maxOffsetRatio = Math.max(xOffsetRatio, yOffsetRatio);
+
+    return 1.1 + 2 * maxOffsetRatio;
 }
+
+function updateParallax(event) {
+    if (!parallaxEnabled) return;
+
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    document.querySelectorAll('.background').forEach(layer => {
+        const speed = parseFloat(layer.getAttribute('data-speed'));
+        const moveX = (centerX - event.clientX) * speed;
+        const moveY = (centerY - event.clientY) * speed;
+
+        const minScale = minScaleFactors[layer.className];
+        const safeScale = Math.max(minScale, 1.0);
+        layer.style.transform = `translate(-50%, -50%) scale(${safeScale}) translate3d(${moveX}px, ${moveY}px, 0)`;
+    });
+}
+
+function resetParallax() {
+    document.querySelectorAll('.background').forEach(layer => {
+        const minScale = minScaleFactors[layer.className];
+        layer.style.transform = `translate(-50%, -50%) scale(${minScale}) translate3d(0px, 0px, 0)`;
+    });
+}
+
+function initScaleFactors() {
+    document.querySelectorAll('.background').forEach(layer => {
+        minScaleFactors[layer.className] = calculateMinScale(layer);
+    });
+}
+
+function init() {
+    initScaleFactors();
+    resetParallax();
+}
+
+document.addEventListener('mousemove', updateParallax);
+window.addEventListener('resize', init);
+init();
