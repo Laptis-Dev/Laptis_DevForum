@@ -11,7 +11,7 @@ function calculateMinScale(layer) {
 
     const maxOffsetRatio = Math.max(xOffsetRatio, yOffsetRatio);
 
-    return 1.1 + 2 * maxOffsetRatio;
+    return 1 + 2 * maxOffsetRatio;
 }
 
 function updateParallax(event) {
@@ -27,14 +27,14 @@ function updateParallax(event) {
 
         const minScale = minScaleFactors[layer.className];
         const safeScale = Math.max(minScale, 1.0);
-        layer.style.transform = `translate(-50%, -50%) scale(${safeScale}) translate3d(${moveX}px, ${moveY}px, 0)`;
+        layer.style.transform = `translate(-50%, -50%) translate3d(${moveX}px, ${moveY}px, 0) scale(${safeScale})`;
     });
 }
 
 function resetParallax() {
     document.querySelectorAll('.background').forEach(layer => {
         const minScale = minScaleFactors[layer.className];
-        layer.style.transform = `translate(-50%, -50%) scale(${minScale}) translate3d(0px, 0px, 0)`;
+        layer.style.transform = `translate(-50%, -50%) translate3d(0px, 0px, 0) scale(${minScale})`;
     });
 }
 
