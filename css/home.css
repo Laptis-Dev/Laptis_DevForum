@@ -1,137 +1,160 @@
 /* Custom_Font */
 @font-face {
-    font-family: 'Fusion Pixel 12px M zh_hans';
-    src: url('../fonts/Pixel12px/pixelzh.ttf') format('truetype');
+  font-family: "Fusion Pixel 12px M zh_hans";
+  src: url("../fonts/Pixel12px/pixelzh.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Fusion Pixel 8px P zh_hans';
-    src: url('../fonts/Pixel8px/pixelzh.ttf') format('truetype');
+  font-family: "Fusion Pixel 8px P zh_hans";
+  src: url("../fonts/Pixel8px/pixelzh.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Fusion Pixel 10px M zh_hans';
-    src: url('../fonts/Pixel10px/pixelzh.ttf') format('truetype');
+  font-family: "Fusion Pixel 10px M zh_hans";
+  src: url("../fonts/Pixel10px/pixelzh.ttf") format("truetype");
 }
 
 /* MainTitle */
 h1 {
-    font-family: 'Fusion Pixel 12px M zh_hans';
-    color: #144fff;
-    text-align: center;
-    justify-content: center;
-    font-size: 3em;
-    text-shadow: 0 0 5px #4e3edd,
-        0 0 7px #6455eb,
-        0 0 10px #a69df4,
-        0 0 15px #ffffff;
+  font-family: "Fusion Pixel 12px M zh_hans";
+  color: #144fff;
+  text-align: center;
+  justify-content: center;
+  font-size: 3em;
+  text-shadow: 0 0 5px #4e3edd, 0 0 7px #6455eb, 0 0 10px #a69df4,
+    0 0 15px #ffffff;
 }
 
 /* TextBox_Effect */
 .cards {
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border: 0 solid;
-    border-radius: 30px;
-    background-color: #00000000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transition:
-        background-color 0.3s ease-in-out,
-        box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border: 0 solid;
+  border-radius: 30px;
+  background-color: #00000000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .cards:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .background {
-    position: fixed;
-    width: 105%;
-    height: 105%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
 
+.background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 80%,
+    rgba(40, 40, 40, 1) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .background.bg1 {
-    background-image: url("../img/1.jpg");
+  background-image: url("../img/1.jpg");
 }
 
 .background.bg2 {
-    background-image: url("../img/2.jpg");
+  background-image: url("../img/2.jpg");
 }
 
 .background.bg3 {
-    background-image: url("../img/3.jpg");
+  background-image: url("../img/3.jpg");
 }
 
 .background.bg4 {
-    background-image: url("../img/4.jpg");
+  background-image: url("../img/4.jpg");
 }
-
 
 /* <ul> */
 .ul1 {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    font-size: 1.2em;
-    color: #000;
-    font-family: 'Fusion Pixel 10px M zh_hans';
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  color: #000;
+  font-family: "Fusion Pixel 10px M zh_hans";
 }
 
 /* <nav> */
 .nav1 {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav1 a {
-    flex: 1;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 5px;
-    text-decoration: none;
-    color: #000;
-    text-align: center;
-    border: 3px solid;
-    border-color: #00000000;
-    border-radius: 20px;
-    font-family: 'Fusion Pixel 10px M zh_hans';
-    box-shadow: none;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  border: 3px solid;
+  border-color: #00000000;
+  border-radius: 20px;
+  font-family: "Fusion Pixel 10px M zh_hans";
+  box-shadow: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .nav1 a:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-color: #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-color: #000;
 }
 
 /* <p> */
 p {
-    text-align: center;
+  text-align: center;
 }
 
 .p1 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .p2 {
-    font-size: 1.2em;
-    margin: 20px 0;
-    color: #000;
-    font-family: 'Fusion Pixel 10px M zh_hans';
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #000;
+  font-family: "Fusion Pixel 10px M zh_hans";
 }
 
 /* <footer> */
 footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.1em;
-    font-family: 'Fusion Pixel 8px P zh_hans';
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.1em;
+  font-family: "Fusion Pixel 8px P zh_hans";
 }
