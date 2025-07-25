@@ -1,5 +1,5 @@
 //定义变量
-KEYBOARD = document.addEventListener("keydown", KeyListener);
+KEYBOARD = document.addEventListener("keyup", KeyListener);
 
 //计算卡片容器尺寸
 const cardsContainer = document.querySelector(".cards");
