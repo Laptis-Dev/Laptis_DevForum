@@ -1,0 +1,35 @@
+.login-title {
+    text-align: center;
+}
+
+.card-centered {
+    padding: 50px;
+    margin: auto;
+    width: fit-content;
+    border-radius: 30px;
+    background-color: #00000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.uname-all {
+
+    font-size: 23px;
+}
+
+.uname-textbox {
+    border: 2px solid;
+}
+
+.upass-all {
+    font-size: 23px;
+}
+
+.upass-textbox {
+    border: 2px solid;
+}
+
+.login-buttom {
+    margin: 20px;
+    margin-left: 50px;
+    border-radius: 30px;
+}
