@@ -1,35 +1,90 @@
-.login-title {
+.sign-selete-title-00 {
     text-align: center;
 }
 
-.card-centered {
-    padding: 50px;
+.card {
+    padding: 45px;
     margin: auto;
     width: fit-content;
     border-radius: 30px;
-    background-color: #00000000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    overflow: hidden;
 }
 
-.uname-all {
-
-    font-size: 23px;
-}
-
-.uname-textbox {
-    border: 2px solid;
-}
-
-.upass-all {
-    font-size: 23px;
-}
-
-.upass-textbox {
-    border: 2px solid;
+.input-group {
+    font-size: 30px;
+    text-align: center;
 }
 
 .login-buttom {
-    margin: 20px;
-    margin-left: 50px;
-    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 auto;
+    border-right-width: auto;
+    border-left-width: auto;
+    border-color: #00000000;
+}
+
+.captcha {
+    text-align: center;
+}
+
+.input-group .signin-container,
+.input-group .signup-container {
+    opacity: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+}
+
+.input-group.right-panel-active .signin-container {
+    opacity: 1;
+    transform: translateX(0) translateY(70%);
+    -webkit-transform: translateX(0) translateY(70%);
+    -moz-transform: translateX(0) translateY(70%);
+    -ms-transform: translateX(0) translateY(70%);
+    -o-transform: translateX(0) translateY(70%);
+}
+
+.input-group.left-panel-active .signup-container {
+    opacity: 1;
+    transform: translateX(0) translateY(-35%);
+    -webkit-transform: translateX(0) translateY(-35%);
+    -moz-transform: translateX(0) translateY(-35%);
+    -ms-transform: translateX(0) translateY(-35%);
+    -o-transform: translateX(0) translateY(-35%);
+}
+
+.input-group:not(.right-panel-active) .signin-container {
+    opacity: 0;
+}
+
+.input-group:not(.left-panel-active) .signup-container {
+    opacity: 0;
+}
+
+.selete-group {
+    text-align: center;
+}
+
+.loginbtn {
+    margin-right: 5%;
+}
+
+.registerbtn {
+    margin-left: 5%;
 }
