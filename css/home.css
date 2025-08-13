@@ -14,6 +14,11 @@
   src: url("../fonts/Pixel10px/pixelzh.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  src: url("/fonts/hosfsans_sc/HARMONYOS_SANS_SC_MEDIUM.TTF") format(truetype);
+}
+
 /* MainTitle */
 .Title {
   font-family: "Fusion Pixel 12px M zh_hans";
@@ -113,7 +118,7 @@
   text-align: center;
   font-size: 1.2em;
   color: #000;
-  font-family: "Fusion Pixel 10px M zh_hans";
+  font-family: 'HarmonyOS Sans SC';
 }
 
 /* <nav> */
@@ -134,7 +139,7 @@
   border: 3px solid;
   border-color: #00000000;
   border-radius: 20px;
-  font-family: "Fusion Pixel 10px M zh_hans";
+  font-family: 'HarmonyOS Sans SC';
   box-shadow: none;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -157,11 +162,13 @@ p {
   font-size: 1.2em;
   margin: 20px 0;
   color: #000;
-  font-family: "Fusion Pixel 10px M zh_hans";
+  font-family: 'HarmonyOS Sans SC';
 }
 
 .logo-title {
   font-family: 'Fusion Pixel 12px M zh_hans';
+  text-shadow: 0 0 5px #4e3edd, 0 0 7px #6455eb, 0 0 10px #a69df4,
+    0 0 15px #ffffff;
   position: fixed;
   color: #144fff;
   right: 85%;
@@ -175,5 +182,5 @@ footer {
   margin-top: auto;
   text-align: center;
   font-size: 0.1em;
-  font-family: "Fusion Pixel 8px P zh_hans";
+  font-family: 'HarmonyOS Sans SC';
 }

@@ -1,7 +1,19 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    #toolbar { background: #f0f0f0; padding: 10px; }
-    #toolbar button, #toolbar select { margin-right: 5px; }
-    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#toolbar {
+    background: #f0f0f0;
+    padding: 10px;
+}
+
+#toolbar button,
+#toolbar select {
+    margin-right: 5px;
+}
+
 #editor {
     min-height: 400px;
     border: 1px solid #ccc;

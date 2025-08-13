@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    src: url("/fonts/hosfsans_sc/HARMONYOS_SANS_SC_MEDIUM.TTF") format(truetype);
+}
+
 .sign-selete-title-00 {
     text-align: center;
+    font-family: 'HarmonyOS Sans SC', sans-serif;
 }
 
 .card {
+    font-family: 'HarmonyOS Sans SC', sans-serif;
     padding: 45px;
     margin: auto;
     width: fit-content;

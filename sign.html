@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>·登入账号·</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <h1 class="sign-selete-title-00">您好，请选择登入方式</h1>
+    <br />
+    <div class="card">
+        <div class="selete-group">
+            <button id="login" type="button" class="loginbtn">登入</button>
+            <button id="register" type="button" class="registerbtn">注册</button>
+        </div>
+
+        <div class="input-group" id="container">
+            <div class="signin-container">
+                <input type="email" class="uname-textbox" id="username_login" placeholder="用户名/邮箱地址" />
+                <br />
+                <input type="password" class="upass-textbox" id="password_login" placeholder="密码" minlength="8"
+                    maxlength="16" required />
+            </div>
+
+            <div class="signup-container">
+                <input type="text" class="uname-textbox" id="username_register" placeholder="用户名" />
+                <br />
+                <input type="email" class="umail-textbox" id="mail" placeholder="邮箱地址" />
+                <br />
+                <input type="password" class="upass-textbox" id="password_register" placeholder="密码（最长16位）"
+                    minlength="8" maxlength="16" />
+                <br />
+                <input type="password" class="upass-textbox" id="password_register" placeholder="验证密码" minlength="8"
+                    maxlength="16" />
+            </div>
+        </div>
+
+        <div class="captcha_group">
+            <p>请稍等，Captcha验证码正在加载...</p>
+        </div>
+
+        <div class="privacy_group">
+            <label for="privacy_1">
+                <input type="checkbox" id="privacy_1" /> url1
+            </label>
+            <br />
+            <label for="privacy_2">
+                <input type="checkbox" id="privacy_2" /> url2
+            </label>
+            <br />
+            <label for="privacy_3">
+                <input type="checkbox" id="privacy_3" /> url3
+            </label>
+        </div>
+
+        <br />
+        <button type="submit" class="login-buttom">提交表单</button>
+        <p class="login-entering">请稍后，正在登入中...</p>
+        <p class="login-failure">登入错误:请勾选并同意'Laptis Dev Forum'的隐私协议</p>
+    </div>
+
+    <script src="dist/userlogin.js"></script>
+</body>
+
+</html>
