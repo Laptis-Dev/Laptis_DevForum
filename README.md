@@ -1,6 +1,10 @@
-# Laptis Dev Forum
-一个开发技术论坛**前端**,
-目前此项目积极开发中...
+# About
+The frontend of the technology forum, 
+project is currently under active development...but
 
-# 协议
-此项目使用MIT License协议。
+# Stop Updating Notice
+This project will cease to be updated from September 2025 onwards,
+will continue to update next year.
+
+# Agreement
+This project uses the MIT License Agreement.

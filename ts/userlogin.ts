@@ -1,13 +1,13 @@
-var signUpButton = document.getElementById('register');
-var signinButton = document.getElementById('login');
-var container = document.getElementById('container');
+var signUpButton = document.getElementById('register') as HTMLElement;
+var signinButton = document.getElementById('login') as HTMLElement;
+var container = document.getElementById('container') as HTMLElement;
 
-(signinButton as HTMLElement).addEventListener('click', function () {
+signinButton.addEventListener('click', () => {
     (container as HTMLElement).classList.remove(`left-panel-active`);
     (container as HTMLElement).classList.add('right-panel-active');
 });
 
-(signUpButton as HTMLElement).addEventListener('click', function () {
+signUpButton.addEventListener('click', () => {
     (container as HTMLElement).classList.remove(`right-panel-active`);
     (container as HTMLElement).classList.add(`left-panel-active`);
 });

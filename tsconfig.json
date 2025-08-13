@@ -1,24 +1,24 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    "rootDir": "./Laptis_DevForum/ts",
-    "outDir": "./Laptis_DevForum/dist",
+    "rootDir": "./ts",
+    "outDir": "./dist",
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "esnext",
-    "target": "esnext",
+    "target": "es6",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
     // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
@@ -32,10 +32,10 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
+    // "verbatimModuleSyntax": true,
+    // "isolatedModules": false,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force",
     "skipLibCheck": true,
   }
 }
